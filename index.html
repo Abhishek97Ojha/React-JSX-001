@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-JSX-001</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .about{
+            text-align: center;
+            padding:1rem;
+        }
+        .about h1{
+            font-size: 3rem;
+        }
+        .about p{
+            margin-top: 2rem;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let JSX = <div className="about">
+            <h1>About Us</h1>
+            <p>At Zappos.com,our purpose is simple: to live and deliver WOW. </p>
+            <p>Twenty years ago, we began as a small online retailer that only sold shoes. Today, we still sell shoes - as well asclothing, handbags, accessories, and more. That more is providing the very best customer service, customer experience, and company culture. We aim to inspire the world by showing it's possible to simultaneously deliver happiness to customers, employees, vendors, shareholders, and the community in a long-term, sustainable way.</p>
+            <p>We hope that in the future people won't even realize we started selling shoes online. Instead, they'll know Zappos as a service company that just happens to sell________.</p>
+        </div>
+
+
+        let root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(JSX);
+    </script>
+</body>
+
+</html>
